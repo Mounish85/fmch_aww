@@ -1,0 +1,119 @@
+# General
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.tmp
+*.temp
+*.log
+*.bak
+
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.pid
+*.seed
+*.pid.lock
+coverage/
+.nyc_output/
+dist/
+build/
+out/
+.vite/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+*.tsbuildinfo
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/.cache/
+
+# Backend
+backend/node_modules/
+backend/logs/
+backend/tmp/
+backend/uploads/
+backend/dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+ml-services/.venv/
+ml-services/venv/
+ml-services/env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+*.egg
+*.egg-info/
+
+# Machine learning
+.huggingface/
+huggingface/
+.cache/huggingface/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.ckpt
+runs/
+wandb/
+mlruns/
+
+# ML service
+ml-services/__pycache__/
+ml-services/.pytest_cache/
+ml-services/.mypy_cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+mongodb/
+data/db/
+
+# Local data
+*.csv
+*.xlsx
+*.xls
+
+# Generated files
+*.generated.*
+*.cache
+
+# Backup files
+*.orig
+*.rej
+*~
