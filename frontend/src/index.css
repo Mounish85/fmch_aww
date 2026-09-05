@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    border-color: #1a1a2e;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafaf5;
+    color: #1a1a2e;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+    border: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    color: #1a1a2e;
+    margin: 0;
+  }
+
+  input, select, textarea, button {
+    font-family: inherit;
+    border-radius: 0 !important;
+  }
+
+  /* Custom Cel-Shaded Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fafaf5;
+    border-left: 2px solid #1a1a2e;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1a1a2e;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e63946;
+  }
+}
+
+@layer utilities {
+  /* Cel-shading utilities */
+  .cel-border {
+    border: 3px solid #1a1a2e;
+  }
+  .cel-border-b {
+    border-bottom: 3px solid #1a1a2e;
+  }
+  .cel-border-t {
+    border-top: 3px solid #1a1a2e;
+  }
+  .cel-border-r {
+    border-right: 3px solid #1a1a2e;
+  }
+  .cel-border-l {
+    border-left: 3px solid #1a1a2e;
+  }
+  .cel-shadow {
+    box-shadow: 3px 3px 0 #1a1a2e;
+  }
+  .cel-shadow-sm {
+    box-shadow: 2px 2px 0 #1a1a2e;
+  }
+  .cel-shadow-lg {
+    box-shadow: 4px 4px 0 #1a1a2e;
+  }
+  .cel-card {
+    border: 3px solid #1a1a2e;
+    box-shadow: 3px 3px 0 #1a1a2e;
+    border-radius: 0px;
+    background-color: #ffffff;
+  }
+  .cel-btn {
+    border: 3px solid #1a1a2e;
+    box-shadow: 3px 3px 0 #1a1a2e;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 0px;
+    transition: all 150ms ease-out;
+  }
+  .cel-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 #1a1a2e;
+  }
+  .cel-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 #1a1a2e;
+  }
+  .cel-input {
+    border: 3px solid #1a1a2e;
+    border-radius: 0px;
+    outline: none;
+    background-color: #ffffff;
+    font-weight: 700;
+    color: #1a1a2e;
+    box-shadow: 2px 2px 0 #1a1a2e;
+  }
+  .cel-input:focus {
+    outline: none;
+    background-color: #fafaf5;
+    box-shadow: 3px 3px 0 #1a1a2e;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .cel-btn:hover, .cel-btn:active {
+    transform: none !important;
+  }
+}
